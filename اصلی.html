@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #00aaff;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .billboards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .billboard-card {
+            position: relative;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .billboard-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .billboard-card .info {
+            padding: 15px;
+        }
+        .billboard-card .info h3 {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .billboard-card .info p {
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .billboard-card .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.9em;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .view-all {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .view-all a {
+            text-decoration: none;
+            color: white;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .view-all a:hover {
+            background-color: #555;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .map {
+            flex: 2;
+            position: relative;
+            text-align: center;
+        }
+        .map img {
+            width: 100%;
+            max-width: 600px;
+        }
+        .map .tooltip {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .map .tooltip h3 {
+            font-size: 1.2em;
+            margin: 0;
+            color: #333;
+        }
+        .info {
+            flex: 1;
+            padding: 20px;
+        }
+        .info h2 {
+            font-size: 2em;
+            color: #333;
+        }
+        .info ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+        .info ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #bbb;
+            cursor: pointer;
+        }
+        .info ul li.active {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#outdoor-advertising">Outdoor Advertising</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#help">Help</a></li>
+        </ul>
+    </nav>
+
+    <!-- Iran Map Section -->
+    <section id="iran-map">
+        <div class="container">
+            <div class="map">
+                <img src="https://via.placeholder.com/600x400" alt="Iran Map">
+                <div class="tooltip">
+                    <h3>Kerman</h3>
+                    <p>Highlighted city with focus on details.</p>
+                </div>
+            </div>
+            <div class="info">
+                <h2>Over 100 cities in Iran</h2>
+                <ul>
+                    <li class="active">Kerman</li>
+                    <li>Tehran</li>
+                    <li>Shiraz</li>
+                    <li>Isfahan</li>
+                    <li>Tabriz</li>
+                    <li>Rasht</li>
+                    <li>Mashhad</li>
+                    <li>Ahvaz</li>
+                    <li>Qom</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+        <h1>Book Online with One Click</h1>
+        <div class="video-container">
+            <video controls>
+                <source src="Mock_Billboard_Video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Discounted Billboards Section -->
+    <section id="discounted">
+        <h2>Discounted Billboards</h2>
+        <div class="billboards-grid">
+            <div class="billboard-card">
+                <img src="https://via.placeholder.com/300x200" alt="Discounted Billboard 1">
+                <div class="badge">20% Off</div>
+                <div class="info">
+                    <h3>Billboard 1</h3>
+                    <p>Location: Tehran</p>
+                </div>
+            </div>
+            <div class="billboard-card">
+                <img src="https://via.placeholder.com/300x200" alt="Discounted Billboard 2">
+                <div class="badge">30% Off</div>
+                <div class="info">
+                    <h3>Billboard 2</h3>
+                    <p>Location: Isfahan</p>
+                </div>
+            </div>
+            <div class="billboard-card">
+                <img src="https://via.placeholder.com/300x200" alt="Discounted Billboard 3">
+                <div class="badge">10% Off</div>
+                <div class="info">
+                    <h3>Billboard 3</h3>
+                    <p>Location: Shiraz</p>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <a href="#">View All</a>
+        </div>
+    </section>
+
+    <!-- Popular Billboards Section -->
+    <section id="popular">
+        <h2>Popular Billboards</h2>
+        <div class="billboards-grid">
+            <div class="billboard-card">
+                <img src="https://via.placeholder.com/300x200" alt="Popular Billboard 1">
+                <div class="info">
+                    <h3>Billboard 1</h3>
+                    <p>Views: 1500</p>
+                    <p>Location: Mashhad</p>
+                </div>
+            </div>
+            <div class="billboard-card">
+                <img src="https://via.placeholder.com/300x200" alt="Popular Billboard 2">
+                <div class="info">
+                    <h3>Billboard 2</h3>
+                    <p>Views: 1200</p>
+                    <p>Location: Tabriz</p>
+                </div>
+            </div>
+            <div class="billboard-card">
+                <img src="https://via.placeholder.com/300x200" alt="Popular Billboard 3">
+                <div class="info">
+                    <h3>Billboard 3</h3>
+                    <p>Views: 1000</p>
+                    <p>Location: Rasht</p>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <a href="#">View All</a>
+        </div>
+    </section>
+</body>
+</html>
